@@ -1,0 +1,34 @@
+.features {
+    grid-column: center-start / center-end;
+
+    margin: 15rem 0;
+
+    display: grid;
+    //grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    //css will add as many tracks as fit in the container = RESPONSIVE without media queries
+    //Each column can have up to 250px
+    gap: 6rem;
+    align-items: start; //moves the items to the top of the grid cell
+}
+
+.feature {
+
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    row-gap: 1.5rem;
+    column-gap: 2.5rem;
+
+
+    &__icon {
+        fill: $color-primary;
+        width: 4.5rem;
+        height: 4.5rem;
+        grid-row: 1 / span 2;
+        transform: translateY(-1rem); //to align the icons "centered" to the text
+    }
+
+    &__text {
+        font-size: 1.7rem;
+    }
+}
